@@ -5,17 +5,16 @@ html {
 body {
 	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
 	font-size: 1rem;
-	width: 90%;
-}
-
-.container{
-	max-width: 1200px;
-	margin: 0 auto;
+	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-flow: row wrap;
-	width: 100%;
+}
+
+.container{
+	max-width: 1200px;
+	margin: 5px auto;
 }
 
 h1,
@@ -57,6 +56,8 @@ header h1 {
 	margin: 0;
 	padding: 10px 0;
 	border-bottom: 2px solid #77a466;
+	width: 100%;
+	text-align: center;
 }
 
 header h1 span {
@@ -95,7 +96,7 @@ header nav ul li a{
 /*The widths are in a percentage!*/
 .top-section,
 .bottom-section {
-	margin: 0 auto;
+	margin: 2px auto;
 	display: flex;
 	align-items: flex-start;
 	flex-flow: row wrap;
@@ -115,7 +116,6 @@ header nav ul li a{
 	height: auto;
 }
 .main-title h2 {
-	text-align: left;
 	padding: 5px 0;
 	color: #77a466;
 }
@@ -130,12 +130,8 @@ header nav ul li a{
 .section-two,
 .section-three {
 	border-top: 1px solid #eee;
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
-
-.section-one h3 {
-	padding: 10px 0;
+	padding: 10px 0px;
+	margin: 5px;
 }
 
 .section-two {
@@ -145,8 +141,6 @@ header nav ul li a{
 
 .section-two h3,
 .section-three h3 {
-
-	text-align: left;
 }
 
 .menu {
@@ -174,7 +168,7 @@ header nav ul li a{
 /*The widths are in a percentage!*/
 footer {
 	border-top: 3px solid #eee;
-	margin: 0 auto;
+	margin: 5px auto;
 	text-align: center;
 	display: flex;
 	align-items: center;
@@ -188,4 +182,54 @@ footer span {
 	text-transform: lowercase;
 	color: #77a466;
 	font-size: 0.8rem;
+}
+
+@media all and (min-width: 768px) {	
+	.bottom-section {
+		margin: 0 auto;
+		justify-content: space-between;
+		flex-flow: row;
+		border-top: 2px solid #eee;
+	}
+
+	.section-one, 
+	.section-two, 
+	.section-three {
+		flex-basis: 30%;
+		justify-content: flex-start;
+		align-items: flex-start;
+		border-top: 0px;
+		border-right: 1px solid #eee;
+		overflow-wrap: normal;
+		padding: 5px 15px;
+	}
+}
+
+@media all and (min-width: 1200px) {
+	header {
+		border-bottom: 0px; 
+	}
+	
+	header h1,
+	header nav ul {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	header h1 {
+		border-bottom: 0px;
+		justify-content: start;
+		width: 60%;
+	}
+
+	header nav {
+		padding: 5px 0px;
+		justify-content: end;
+		width: 40%;
+	}
+
+	nav {
+		
+	}
 }
